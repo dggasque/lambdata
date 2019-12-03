@@ -22,9 +22,10 @@ def train_val_test_split(
         df.sample(frac=1), [int(train_per * len(df)), int(percent * len(df))])
     return train, validate, test
 
+
 class Processor:
     """Processor for dataframes"""
-    
+
     def __init__(self):
         pass
 
@@ -36,7 +37,6 @@ class Processor:
             if null_sum > 0:
                 print(f'{col} has {null_sum} missing values')
 
-
     def datetime_split(self, df, column):
         """#Function to split dates ("MM/DD/YYYY", etc.) into multiple columns."""
         if df[column].dtype == 'datetime64[ns]' or '<M8[ns]':
@@ -45,4 +45,4 @@ class Processor:
             df['day'] = df[column].dt.day
 
         else:
-            return 'WARNING: Series must be datetime data format!'       
+            return 'WARNING: Series must be datetime data format!'
