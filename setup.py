@@ -12,9 +12,9 @@ with open('README.md', 'r') as fh:
     LONG_DESCRIPTION = fh.read()
     setuptools.setup(
         name='lambdata-dggasque',
-        version = '0.1.3',
+        version = '0.1.4',
         author = 'dggasque',
-        description = 'a collection of data science helper functions for lambda school',
+        description = 'a collection of data science helper functions for Lambda School',
         long_description= LONG_DESCRIPTION,
         long_description_content_type='text/markdown',
         url='https://lambdaschool.com/courses/data-science',
@@ -23,6 +23,5 @@ with open('README.md', 'r') as fh:
         install_requires = REQUIRED,
         classifiers=["Programming Language :: Python :: 3",
         "License :: OSI Approved :: MIT License",
-        "Operating System :: OS Independent",
-        ]
-    )
+        "Operating System :: OS Independent"
+        )
